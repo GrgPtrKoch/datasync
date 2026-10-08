@@ -1,0 +1,7 @@
+# Laufzeit-Abhängigkeiten
+requests>=2.31      # HTTP-Client für die API-Anbindung
+Flask>=3.0          # nur für die lokale Mock-API (mock_api/server.py)
+
+# Entwicklung / Tests
+pytest>=8.0         # Test-Framework
+responses>=0.25     # mockt HTTP-Aufrufe in den Tests (keine echte API nötig)
