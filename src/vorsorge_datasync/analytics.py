@@ -36,11 +36,7 @@ def reporting_overview(conn: sqlite3.Connection) -> dict:
 
 
 def reporting_capital_by_decade(conn: sqlite3.Connection) -> list[dict]:
-    """Durchschnittliches Sparkapital je Eintritts-Jahrzehnt.
-
-    Zeigt eine typische Gruppierungs-Auswertung (GROUP BY auf einem
-    berechneten Feld).
-    """
+    """Durchschnittliches Sparkapital je Eintritts-Jahrzehnt."""
     sql = """
         SELECT
             (entry_year / 10) * 10          AS jahrzehnt,
