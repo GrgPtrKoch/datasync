@@ -1,4 +1,4 @@
-# vorsorge-datasync
+# datasync
 
 Ein kleines, aber vollständiges Python-Projekt, das eine typische Aufgabe im
 **Applikations-Management einer Pensionskasse** abbildet: Versichertendaten über
