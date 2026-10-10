@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vorsorge-datasync"
+version = "0.1.0"
+description = "Versichertendaten per API laden, in SQL speichern, auswerten und auf Datenqualität prüfen"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = [
+    "Flask>=3.0",
+    "pytest>=8.0",
+    "responses>=0.25",
+]
+
+[project.scripts]
+vorsorge-datasync = "vorsorge_datasync.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-v"
