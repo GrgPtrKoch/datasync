@@ -55,8 +55,8 @@ Damit ein Scheduler oder eine CI-Pipeline den Lauf automatisch auswerten kann:
 
 | Code | Bedeutung |
 |---|---|
-| `0` | Lauf erfolgreich, keine Datenqualitäts-Fehler |
-| `1` | Lauf erfolgreich, aber Datenqualitäts-Fehler gefunden |
+| `0` | Lauf erfolgreich, keine Datenqualitätsfehler |
+| `1` | Lauf erfolgreich, aber Datenqualitätsfehler gefunden |
 | `2` | technischer Fehler (z. B. API nicht erreichbar) |
 
 ## Tests
@@ -70,7 +70,7 @@ temporäre Datenbank pro Test – sie laufen daher ohne Netzwerk und ohne
 laufende Mock-API, schnell und reproduzierbar.
 
 Abgedeckt sind:
-- **Unit-Tests** je Datenqualitäts-Check (findet jeder Check genau seinen Fehler?)
+- **Unit-Tests** je Datenqualitätscheck (findet jeder Check genau seinen Fehler?)
 - **Negativtests** des API-Clients (HTTP 500, kaputtes Antwortformat)
 - **Idempotenz-Test** der Datenbank (kein doppeltes Laden)
 - **Integrationstest** der gesamten Pipeline (End-to-End, API gemockt)
