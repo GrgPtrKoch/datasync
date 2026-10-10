@@ -3,9 +3,6 @@
 Legt das Schema an und schreibt die Versichertendaten idempotent ("Upsert"):
 Ein erneuter Lauf mit denselben Daten erzeugt keine Duplikate, sondern
 aktualisiert bestehende Datensätze. Das ist für wiederholbare Ladejobs wichtig.
-
-SQLite dient hier als leichtgewichtiger Ersatz für eine echte SQL-/Oracle-DB –
-die SQL-Logik ist dieselbe.
 """
 from __future__ import annotations
 
@@ -48,7 +45,6 @@ ON CONFLICT(member_id) DO UPDATE SET
 @contextmanager
 def get_connection(db_path: str | None = None):
     """Öffnet eine SQLite-Verbindung als Context-Manager.
-
     Commit bei Erfolg, Rollback bei Fehler, Verbindung wird immer geschlossen.
     """
     db_path = db_path if db_path is not None else config.DB_PATH
@@ -71,7 +67,6 @@ def init_schema(conn: sqlite3.Connection) -> None:
 
 def upsert_members(conn: sqlite3.Connection, members: list[dict]) -> int:
     """Schreibt die Versicherten idempotent in die Datenbank.
-
     Returns:
         Anzahl der verarbeiteten Datensätze.
     """
