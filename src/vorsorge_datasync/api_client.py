@@ -1,4 +1,4 @@
-"""API-Client für die Vorsorge-Schnittstelle (PK/S.Open-ähnlich).
+"""API-Client für die Vorsorge-Schnittstelle.
 
 Kapselt alle HTTP-Details an einer Stelle. Der Rest des Programms arbeitet
 nur noch mit Python-Datenstrukturen und muss nichts über HTTP wissen.
