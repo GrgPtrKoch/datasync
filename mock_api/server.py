@@ -3,16 +3,12 @@
 Start:  python mock_api/server.py
 Dann:   GET http://localhost:5000/api/v1/members
 
-Der Datensatz ist bewusst klein und enthält einige fehlerhafte Einträge
-(fehlende AHV-Nummer, Duplikat, unplausibles Geburtsjahr, negatives
-Sparkapital), damit die Datenqualitäts-Checks im Projekt etwas zu melden haben.
+Der Datensatz ist bewusst klein und enthält einige fehlerhafte Einträge.
 """
 from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-# Feste Beispieldaten → reproduzierbar für Demos und Tests.
-# AHV-Nummer im Schweizer Format 756.XXXX.XXXX.XX
 MEMBERS = [
     {"member_id": 1001, "ahv": "756.1234.5678.97", "first_name": "Anna",   "last_name": "Meier",     "birth_year": 1985, "entry_year": 2010, "savings_capital": 142500.00},
     {"member_id": 1002, "ahv": "756.2345.6789.08", "first_name": "Beat",   "last_name": "Müller",    "birth_year": 1972, "entry_year": 2001, "savings_capital": 310250.50},
