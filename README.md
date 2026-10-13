@@ -1,13 +1,12 @@
 # datasync
 
-Ein kleines, aber vollständiges Python-Projekt, das eine typische Aufgabe im
-**Applikations-Management einer Pensionskasse** abbildet: Versichertendaten über
+Ein kleines Python-Projekt zum Lernen: Personendaten über
 eine REST-Schnittstelle beziehen, in eine SQL-Datenbank laden, auswerten und
 auf **Datenqualität** prüfen – vollständig automatisiert und durch
 Regressionstests abgesichert.
 
 > Lern- und Demonstrationsprojekt. Die Datenquelle ist eine mitgelieferte
-> Mock-API im Stil einer PK/S.Open-Schnittstelle; alle Daten sind frei erfunden.
+> Mock-API; alle Daten sind frei erfunden.
 
 ## Was das Projekt zeigt
 
